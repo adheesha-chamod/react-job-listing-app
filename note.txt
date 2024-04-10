@@ -1,0 +1,4 @@
+git init
+
+
+npm create vite@latest react-job-listing-app
