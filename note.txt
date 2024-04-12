@@ -33,3 +33,6 @@ git push    -> push the code to the remote repo 'origin' from the current branch
 
 ===============================================================
 npm create vite@latest react-job-listing-app
+
+npm i
+
