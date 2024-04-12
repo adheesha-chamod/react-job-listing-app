@@ -20,19 +20,20 @@ git checkout <branch-name>
 
 git remote add origin <remote-repo-url>
 
-
 git branch -M main          -> rename the current branch as main
 
 git push -u origin main     -> push the code to the remote repo 'origin' from the branch 'main' (-u -> upstream to create a link between the local and remote branches)
 
-
 git push -u origin dev      -> push the code to the remote repo 'origin' from the branch 'dev'
 
 git push    -> push the code to the remote repo 'origin' from the current branch
-
 
 ===============================================================
 npm create vite@latest react-job-listing-app
 
 npm i
 
+npm run dev
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
