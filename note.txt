@@ -28,6 +28,10 @@ git push -u origin dev      -> push the code to the remote repo 'origin' from th
 
 git push    -> push the code to the remote repo 'origin' from the current branch
 
+git fetch origin main
+
+git pull origin main
+
 ===============================================================
 npm create vite@latest react-job-listing-app
 
