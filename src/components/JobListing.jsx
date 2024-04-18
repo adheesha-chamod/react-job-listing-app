@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaMapMarker } from "react-icons/fa"
+import { FaMapMarker } from "react-icons/fa";
 import PropTypes from "prop-types";
 
 const JobListing = ({ job }) => {
