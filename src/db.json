@@ -85,17 +85,17 @@
       }
     },
     {
-      "id": "a787",
-      "title": "test name",
+      "id": "7",
+      "title": "test name updated",
       "type": "Full-Time",
-      "location": "test location",
-      "description": "test desc",
+      "location": "test location updated",
+      "description": "test desc updated",
       "salary": "Under $50K",
       "company": {
-        "name": "test company name",
-        "description": "test company desc",
-        "contactEmail": "adheesha.1999@gmail.com",
-        "contactPhone": "0779293569"
+        "name": "test company name updated",
+        "description": "test company desc updated",
+        "contactEmail": "adheesha@gmail.com",
+        "contactPhone": "0779293511"
       }
     }
   ]
