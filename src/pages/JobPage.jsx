@@ -1,10 +1,31 @@
-import { useParams, useLoaderData } from "react-router-dom";
+import PropTypes from "prop-types";
+import { useParams, useLoaderData, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
-const JobPage = () => {
+const JobPage = ({ deleteJob }) => {
   const { id } = useParams();
   const job = useLoaderData();
+  const navigate = useNavigate();
+
+  const onDeleteClick = (jobId) => {
+    const isConfirm = window.confirm(
+      "Are you sure you want to delete this job?"
+    );
+
+    if (!isConfirm) {
+      return;
+    } else {
+      deleteJob(jobId);
+
+      // show success message
+      toast.success("Job deleted successfully");
+      
+      // redirect to the jobs page
+      navigate("/jobs");
+    }
+  };
 
   return (
     <>
@@ -78,7 +99,10 @@ const JobPage = () => {
                 >
                   Edit Job
                 </Link>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                <button
+                  onClick={() => onDeleteClick(job.id)}
+                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                >
                   Delete Job
                 </button>
               </div>
@@ -94,6 +118,10 @@ const jobLoader = async ({ params }) => {
   const res = await fetch(`/api/jobs/${params.id}`);
   const data = await res.json();
   return data;
+};
+
+JobPage.propTypes = {
+  deleteJob: PropTypes.func.isRequired,
 };
 
 export { JobPage as default, jobLoader };

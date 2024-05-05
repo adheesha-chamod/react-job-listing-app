@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import PropTypes from "prop-types";
 
@@ -34,6 +35,9 @@ const AddJobPage = ({ saveSubmitJob }) => {
     };
 
     saveSubmitJob(newJob);
+
+    // show success message
+    toast.success("Job added successfully");
 
     // redirect to the jobs page
     navigate("/jobs");
