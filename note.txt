@@ -43,3 +43,11 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 npm i react-router-dom
+
+npm i -D json-server
+
+npm run server
+
+npm i react-spinners
+
+npm i react-toastify
